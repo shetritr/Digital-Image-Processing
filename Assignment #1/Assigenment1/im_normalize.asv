@@ -1,8 +1,0 @@
-function image_normalized = im_normalize(image, min, max)
-maxValue = max(image(:));
-minValue = min(image(:));
-range = maxValue - minValue;
-image_normalized = (image - minValue) ./ range; 
-range2 = max - min;
-image_normalized = (image_normalized * range2) + min;
-end

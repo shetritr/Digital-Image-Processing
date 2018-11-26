@@ -1,0 +1,208 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Q5</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-11-26"><meta name="DC.source" content="Q5.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">Q5.1 Object circling</a></li><li><a href="#3">Q5.1.1</a></li><li><a href="#4">Q5.1.3</a></li><li><a href="#5">Q5.2.1</a></li><li><a href="#6">function</a></li><li><a href="#7">Q5.1.2</a></li></ul></div><pre class="codeinput"><span class="comment">%-==========================================-</span>
+<span class="comment">% Students ID : Maor Assayag     318550746  |</span>
+<span class="comment">%               Refael Shetrit  204654891  |</span>
+<span class="comment">%-==========================================-</span>
+clear <span class="string">all</span>;
+close <span class="string">all</span>;
+</pre><h2 id="2">Q5.1 Object circling</h2><h2 id="3">Q5.1.1</h2><p>5.1.1	Read the 'cap1/2.png' images in MATLAB using the 'imread()' function and normalize them to [0 , 1].</p><pre class="codeinput">cap1 = double(imread(<span class="string">'cap1.png'</span>))/255;
+cap2 = double(imread(<span class="string">'cap2.png'</span>))/255;
+</pre><h2 id="4">Q5.1.3</h2><p>5.1.3	Test your algorithm on 'cap test.png' image. Don't modify the algorithm, it's alright if it fails. Show and analyze the results.</p><pre class="codeinput">Blue_cap(<span class="string">"Cap1"</span> ,cap1);
+figure;
+Blue_cap(<span class="string">"Cap2"</span> ,cap2);
+figure;
+cap_test = double(imread(<span class="string">'cap_test.png'</span>))/255;
+Blue_cap(<span class="string">"Cap Test"</span> ,cap_test);
+</pre><h2 id="5">Q5.2.1</h2><pre class="codeinput">rgbImage = double(imread(<span class="string">'WB.jpeg'</span>))/255;
+imshow(rgbImage, [0 1]);
+figure;
+R = rgbImage(:,:,1);
+G = rgbImage(:,:,2);
+B = rgbImage(:,:,3);
+gray = dip_rgb2gray(rgbImage);
+graymean = mean2(gray);
+Rmean = mean2(R);
+Gmean = mean2(G);
+Bmean = mean2(B);
+R = R*graymean/Rmean;
+G = G*graymean/Gmean;
+B = B*graymean/Bmean;
+rgbImage = cat(3,R,G,B);
+imshow(rgbImage, [0 1]);
+</pre><h2 id="6">function</h2><h2 id="7">Q5.1.2</h2><pre class="codeinput"><span class="comment">%5.1.2	Find the blue cap of the soda bottle in the</span>
+<span class="comment">%images and circle it in each image.</span>
+<span class="keyword">function</span> Blue_cap(name, img)
+    [imgh,imgs,imgv] = dip_rgb2hsv(img);
+    bluepixels = imgh &gt;= 0.6 &amp; imgh &lt;= 0.7 &amp; imgs &gt;= 0.3 &amp; imgs &lt;= 1 &amp; imgv &gt;= 0 &amp; imgv &lt;= 0.17;
+    m = ones(6,10);
+    I1 = 0;
+    J1 = 0;
+    <span class="keyword">for</span> i = 1:494
+        <span class="keyword">for</span> j = 1:990
+            b = bluepixels(i:i+5,j:j+9);
+            <span class="keyword">if</span> eq(b,m)
+                I1 = i + 4 ;
+                J1 = j + 10;
+                <span class="keyword">break</span>
+            <span class="keyword">end</span>
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+    imshow(bluepixels,[0 1]);
+    title(<span class="string">"Binary masks "</span> + name);
+    figure;
+    radio = 30;
+    imshow(img,[0 1]);
+    hold <span class="string">on</span>
+    t=0:0.1:2.1*pi;
+    x = J1 + radio*sin(t);
+    y = I1 + radio*cos(t);
+    plot(x,y,<span class="string">'r'</span>,<span class="string">'LineWidth'</span>,4);
+    title(name);
+    hold <span class="string">off</span>
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="Q5_03.png" alt=""> <img vspace="5" hspace="5" src="Q5_04.png" alt=""> <img vspace="5" hspace="5" src="Q5_05.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%-==========================================-
+% Students ID : Maor Assayag     318550746  |
+%               Refael Shetrit  204654891  |
+%-==========================================-
+clear all;
+close all;
+
+%% Q5.1 Object circling
+%% Q5.1.1 
+% 5.1.1	Read the 'cap1/2.png' images 
+% in MATLAB using the 'imread()' function and normalize them to [0 , 1].
+cap1 = double(imread('cap1.png'))/255; 
+cap2 = double(imread('cap2.png'))/255;
+%% Q5.1.3 
+% 5.1.3	Test your algorithm on 'cap test.png' image. Don't modify the algorithm,
+% it's alright if it fails. Show and analyze the results. 
+Blue_cap("Cap1" ,cap1);
+figure;
+Blue_cap("Cap2" ,cap2);
+figure;
+cap_test = double(imread('cap_test.png'))/255;
+Blue_cap("Cap Test" ,cap_test);
+
+%% Q5.2.1
+rgbImage = double(imread('WB.jpeg'))/255;
+imshow(rgbImage, [0 1]);
+figure;
+R = rgbImage(:,:,1);
+G = rgbImage(:,:,2);
+B = rgbImage(:,:,3);
+gray = dip_rgb2gray(rgbImage);
+graymean = mean2(gray);
+Rmean = mean2(R);
+Gmean = mean2(G);
+Bmean = mean2(B);
+R = R*graymean/Rmean;
+G = G*graymean/Gmean;
+B = B*graymean/Bmean;
+rgbImage = cat(3,R,G,B);
+imshow(rgbImage, [0 1]);
+
+
+%% function
+%% Q5.1.2 
+%5.1.2	Find the blue cap of the soda bottle in the 
+%images and circle it in each image. 
+function Blue_cap(name, img)
+    [imgh,imgs,imgv] = dip_rgb2hsv(img);
+    bluepixels = imgh >= 0.6 & imgh <= 0.7 & imgs >= 0.3 & imgs <= 1 & imgv >= 0 & imgv <= 0.17;
+    m = ones(6,10);
+    I1 = 0;
+    J1 = 0;
+    for i = 1:494 
+        for j = 1:990 
+            b = bluepixels(i:i+5,j:j+9);
+            if eq(b,m)
+                I1 = i + 4 ;
+                J1 = j + 10;
+                break
+            end
+        end
+    end
+    imshow(bluepixels,[0 1]);
+    title("Binary masks " + name);
+    figure;
+    radio = 30;
+    imshow(img,[0 1]);
+    hold on
+    t=0:0.1:2.1*pi;
+    x = J1 + radio*sin(t);
+    y = I1 + radio*cos(t);
+    plot(x,y,'r','LineWidth',4);
+    title(name);
+    hold off
+end
+##### SOURCE END #####
+--></body></html>

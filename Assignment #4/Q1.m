@@ -90,8 +90,14 @@ title ('Q1 :  prewitt edge')
 
 %% Q1.6
 imgD = double(imread("diamond.png"))/256; 
+figure;
+imshow(imgD,[])
+title ('Q1 :  Diamond')
+
 [vector,edge_image] = dip_edge_detect(imgD);
+vector 
 
 figure
 imshow(imgD,[]);
 rectangle('Position',[vector(1) vector(2)-vector(4) vector(3) vector(4)]);
+title ('Q1 : result Diamond')

@@ -1,0 +1,24 @@
+%-==========================================-
+% Students ID : Maor Assayag     318550746  |
+%               Refael Shetrit   204654891  |
+%-==========================================-
+function QR_binary = dip_QR2Binary_raw(straightened_QR)
+% Q1.5  - dip_binaryQR2str - Extract the binary values from the straightened QR. 
+% The matrix is row major meaning that the correct order is 
+% (1,1), (2,1), ..., (6,1), (1,2), (2,2),... (6,6).
+% INPUTS - straightened_QR - 258x258 grayscale image represent straightened
+%           recoverd QR
+% OUTPTUS - current_QR_binary - 258x258 binary matrix repreesnt a QR
+
+% crop intial 2-pixel-wide frame 
+current_QR = straightened_QR(2:end-1,2:end-1);
+scale = 256/6;
+QR_binary = zeros(6,6);
+for (i = 0:5)
+    for (j = 0:5)
+        mean_area = sum(current_QR(i*scale +1 : i*scale +scale, j*scale +1 : j*scale +scale),'all')/(scale^2);
+        QR_binary(i+1,j+1) = round(mean_area);
+    end
+end
+end
+

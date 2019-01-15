@@ -20,15 +20,15 @@
 ### Assignments
 <img src="https://www.cfn.group.cam.ac.uk/images/1428080879907.png" width="400" height="150">  
   
-*implemented in MATLAB 2018R*
+*Implemented in MATLAB 2018R*
 
-Exercise 1 - Basic Image Operations   
-Exercise 2 - Color Spaces  
-Exercise 3 - Transformations  
-Exercise 4 - Edges and Feature Descriptors  
-Exercise 5 - Geometric Transformations  
-Hackton  
-Final project 
+   Exercise 1 - Basic Image Operations   
+   Exercise 2 - Color Spaces  
+   Exercise 3 - Transformations  
+   Exercise 4 - Edges and Feature Descriptors  
+   Exercise 5 - Geometric Transformations  
+   Hackton  
+   Final project 
 
 ## Authors
  *Maor Assayag*  

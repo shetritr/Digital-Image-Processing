@@ -20,7 +20,7 @@
 #### Assignments
 ![alt text](https://www.cfn.group.cam.ac.uk/images/1428080879907.png)
 #
-implemented in MATLAB
+implemented in MATLAB 2018R
 
 Exercise 1 - Basic Image Operations
 Exercise 2 - Color Spaces
@@ -29,3 +29,8 @@ Exercise 4 - Edges and Feature Descriptors
 Exercise 5 - Geometric Transformations
 Hackton
 Final project 
+
+## Authors
+<i>Maor Assayag</i>
+<i>Refael Shetrit</i>
+B.Sc in Computer Engineering, Ben Gurion University, Israel.

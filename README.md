@@ -1,6 +1,6 @@
 # Introduction to Digital Image Processing
 #
-![alt text](https://i.stack.imgur.com/NdUmQ.jpg)
+![alt text](https://i.imgur.com/zMdhsl0.png)
 
 ## Course content:
 #### Course content:

@@ -23,15 +23,15 @@
 #
 implemented in MATLAB 2018R
 
-Exercise 1 - Basic Image Operations 
-Exercise 2 - Color Spaces
-Exercise 3 - Transformations
-Exercise 4 - Edges and Feature Descriptors
-Exercise 5 - Geometric Transformations
-Hackton
-Final project 
+* Exercise 1 - Basic Image Operations 
+* Exercise 2 - Color Spaces
+* Exercise 3 - Transformations
+* Exercise 4 - Edges and Feature Descriptors
+* Exercise 5 - Geometric Transformations
+* Hackton
+* Final project 
 
 ## Authors
-*Maor Assayag*
-*Refael Shetrit*
-B.Sc in Computer Engineering, Ben Gurion University, Israel.
+ ### *Maor Assayag*
+ ### *Refael Shetrit*
+ ### B.Sc in Computer Engineering, Ben Gurion University, Israel.

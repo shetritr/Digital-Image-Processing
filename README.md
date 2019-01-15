@@ -4,7 +4,7 @@
 #
 
 ## Course content
-#### Subjects
+### Subjects
 1. Basic principles of images: human visual system, light and color, acquisition and image representation.
 2. Image processing in space: linear and nonlinear transformations, histograms, 2D signals and systems, 2D convolution, spatial filters, gradient of images.
 3. Frequency image processing: 2D Fourier transform and its properties, Radon transform, 2D transformation and its properties. 2D discrete Fourier transform and its properties. 2D 2D transformations.
@@ -17,7 +17,7 @@
 9. Match images: pixel-based matching, character-based matching
 10. Advanced applications in image processing and computer vision: tracking, stereo, face recognition
 
-#### Assignments
+### Assignments
 ![alt text](https://www.cfn.group.cam.ac.uk/images/1428080879907.png)
 !<img src="https://www.cfn.group.cam.ac.uk/images/1428080879907.png" width="100">
 #
@@ -32,6 +32,6 @@ implemented in MATLAB 2018R
 * Final project 
 
 ## Authors
- ### *Maor Assayag*
- ### *Refael Shetrit*
- ### B.Sc in Computer Engineering, Ben Gurion University, Israel.
+ #### *Maor Assayag*
+ #### *Refael Shetrit*
+ #### B.Sc in Computer Engineering, Ben Gurion University, Israel.

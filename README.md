@@ -1,9 +1,10 @@
 # Introduction to Digital Image Processing
-#
-![alt text](https://i.imgur.com/zMdhsl0.png)
 
-## Course content:
-#### Course content:
+![alt text](https://i.imgur.com/zMdhsl0.png)
+#
+
+## Course content
+#### Subjects
 1. Basic principles of images: human visual system, light and color, acquisition and image representation.
 2. Image processing in space: linear and nonlinear transformations, histograms, 2D signals and systems, 2D convolution, spatial filters, gradient of images.
 3. Frequency image processing: 2D Fourier transform and its properties, Radon transform, 2D transformation and its properties. 2D discrete Fourier transform and its properties. 2D 2D transformations.
@@ -15,3 +16,16 @@
 8. Active contours, split & merge, graph-cuts, mean-shift, watershed: Segmentation of images
 9. Match images: pixel-based matching, character-based matching
 10. Advanced applications in image processing and computer vision: tracking, stereo, face recognition
+
+#### Assignments
+![alt text](https://www.cfn.group.cam.ac.uk/images/1428080879907.png)
+#
+implemented in MATLAB
+
+Exercise 1 - Basic Image Operations
+Exercise 2 - Color Spaces
+Exercise 3 - Transformations
+Exercise 4 - Edges and Feature Descriptors
+Exercise 5 - Geometric Transformations
+Hackton
+Final project 

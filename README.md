@@ -18,8 +18,7 @@
 10. Advanced applications in image processing and computer vision: tracking, stereo, face recognition
 
 ### Assignments
-![alt text](https://www.cfn.group.cam.ac.uk/images/1428080879907.png)
-!<img src="https://www.cfn.group.cam.ac.uk/images/1428080879907.png" width="100">
+!<img src="https://www.cfn.group.cam.ac.uk/images/1428080879907.png" width="200" height="50">
 #
 implemented in MATLAB 2018R
 

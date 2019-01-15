@@ -19,7 +19,7 @@
 
 #### Assignments
 ![alt text](https://www.cfn.group.cam.ac.uk/images/1428080879907.png)
-![](https://www.cfn.group.cam.ac.uk/images/1428080879907.png = 100x250)
+!<img src="https://www.cfn.group.cam.ac.uk/images/1428080879907.png" width="100">
 #
 implemented in MATLAB 2018R
 

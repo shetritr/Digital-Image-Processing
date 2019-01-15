@@ -18,7 +18,8 @@
 10. Advanced applications in image processing and computer vision: tracking, stereo, face recognition
 
 ### Assignments
-<img src="https://www.cfn.group.cam.ac.uk/images/1428080879907.png" width="400" height="150">
+<img src="https://www.cfn.group.cam.ac.uk/images/1428080879907.png" width="400" height="150">  
+  
 *implemented in MATLAB 2018R*
 
 Exercise 1 - Basic Image Operations   
@@ -26,7 +27,7 @@ Exercise 2 - Color Spaces
 Exercise 3 - Transformations  
 Exercise 4 - Edges and Feature Descriptors  
 Exercise 5 - Geometric Transformations  
-Hackton
+Hackton  
 Final project 
 
 ## Authors

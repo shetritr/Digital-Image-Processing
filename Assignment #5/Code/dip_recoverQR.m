@@ -7,9 +7,9 @@ function straightened_QR = dip_recoverQR(reference_image, reference_image_corner
 % image use all the transformations learned in class: Rigid (rotation, trans-
 % lation and scale transformation), Affine (shearing added), Perspective.
 % INPUTS : reference_image - binary 258x258 image represent QR size
-%          reference_image_corners - 2x4 dobule array represent reference_image 4 cornsers
-%          image2recover - grayscale image conatining the QR, unknown size
-%          image2recover_corners  - 2x4 dobule array represent reference_image 4 cornsers
+%          reference_image_corners - 2x4 double array represent reference_image 4 corners
+%          image2recover - grayscale image containing  the QR, unknown size
+%          image2recover_corners  - 2x4 double array represent reference_image 4 corners
 % OUTPUTS : straightened_QR - straightened QR code, size of reference_image grayscale image
 
 % Check for Rigid transformation
@@ -30,7 +30,7 @@ if (TF_Rigid == 0)
         % Use this transformation when the scene appears tilted.
         % Straight lines remain straight, but parallel lines converge toward
         % a vanishing point.
-        tform_tryPerspective = fitgeotrans(image2recover_corners,reference_image_corners,'affine'); 
+        tform_tryPerspective = fitgeotrans(image2recover_corners,reference_image_corners,'projective'); 
         tform = tform_tryPerspective;
     else
         tform = tform_tryAffine;
@@ -38,6 +38,7 @@ if (TF_Rigid == 0)
 else
     tform = tform_tryRigid;
 end
+
 
 % Compute additional infomation
 if (TF_Rigid)
@@ -47,7 +48,6 @@ elseif (TF_Affine)
 else 
     translation_type = 'Perspective'; 
 end
-
 % Compute invese transform
 tformInv = invert(tform);
 Tinv = tformInv.T;

@@ -31,6 +31,6 @@ implemented in MATLAB 2018R
 * Final project 
 
 ## Authors
- #### *Maor Assayag*
- #### *Refael Shetrit*
- #### B.Sc in Computer Engineering, Ben Gurion University, Israel.
+  *Maor Assayag*  
+  *Refael Shetrit*  
+  B.Sc in Computer Engineering, Ben Gurion University, Israel.

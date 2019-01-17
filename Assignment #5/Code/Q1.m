@@ -17,17 +17,17 @@ title('Q1.1 - QR code of ID=318550746');
 % The "hard" photo should be one that is on the limit where you can no
 % longer properly interpret the QR code. (see example in gure 1 ).
 % notation : 1 = easy to 3 = hard.
-qr_angle1 = rgb2gray(double(imread('QR_angle1.png')));
+qr_angle1 = rgb2gray(imread('image1.jpeg'))/255;
 figure;
 imshow(qr_angle1, []);
 title('Q1.2 - QR image 1')
 
-qr_angle2 = rgb2gray(double(imread('QR_angle2.png')));
+qr_angle2 = rgb2gray(imread('image2.jpeg'))/255;
 figure;
 imshow(qr_angle2, []);
 title('Q1.2 - QR image 2')
 
-qr_angle3 = rgb2gray(double(imread('QR_angle3.png')));
+qr_angle3 = rgb2gray(imread('image3.jpeg'))/255;
 figure;
 imshow(qr_angle3, []);
 title('Q1.2 - QR image 3')
@@ -35,19 +35,18 @@ title('Q1.2 - QR image 3')
 %% Q1.3 - get images corners
 % Q1.3 - Locate the points on the QR code in each image manually. You may use
 % MATLAB's ginput(4).
-% Load corners mat files
 load('image_corners.mat');
 load('image1_corners.mat');
 load('image2_corners.mat');
 load('image3_corners.mat');
 
-% Creating corners mat files
+% % Creating corners mat files
 % figure;
 % imshow(qr_angle1, []);
 % title('Q1.2 - angle 1 of QR code image');
 % image1_corners = ginput(4);
 % close;
-
+% 
 % figure;
 % imshow(qr_angle2, []);
 % title('Q1.2 - angle 2 of QR code image');
@@ -66,22 +65,32 @@ load('image3_corners.mat');
 % save image2_corners image2_corners
 % save image3_corners image3_corners
 
-%% Q1.4,5,6,7,8
-% dip_recoverQR - Q1.4 Transform the image such that the QR code is straightened
-% dip_QR2Binary_raw - Q 1.6 - Extract the binary values from the straightened QR.
-% dip_QR2Binary - Q 1.6 - Another method to Extract the binary values from the straightened QR.
-% dip_binaryQR2str - Q1.7 - Convert every 4 bits to an integer
-% dip_imageQR2ID - the algorithm as a whole
+%% Q1.4,6,7
+% Q1.4 - dip_recoverQR -  Transform the image such that the QR code is straightened
+% Q1.6 - dip_QR2Binary_raw - Extract the binary values from the straightened QR.
+% Q1.6 - dip_QR2Binary - Another method to Extract the binary values from the straightened QR.
+% Q1.7 - dip_binaryQR2str  - Convert every 4 bits to an integer
 
+% dip_imageQR2ID - the algorithm as a whole
+% we can pass blank image as a reference - image_org = zeros(258,258);
+% We are passing the orignal image for display purpose only
 id_result_1 = dip_imageQR2ID(image_org, image_corners, qr_angle1, image1_corners);
 id_result_2 = dip_imageQR2ID(image_org, image_corners, qr_angle2, image2_corners);
 id_result_3 = dip_imageQR2ID(image_org, image_corners, qr_angle3, image3_corners);
 if (strcmp(id,id_result_1)==1)
-    display('Q1 is accurate for image 1');
+    fprintf('Q1 is accurate for image 1, the result ID for %s is %s \n',id, id_result_1);
+else
+    fprintf('Q1 is not accurate for image 1, the result ID for %s is %s \n',id, id_result_1);
 end
+
 if (strcmp(id,id_result_2)==1)
-    display('Q1 is accurate for image 2');
+    fprintf('Q1 is accurate for image 2, the result ID for %s is %s \n',id, id_result_2);
+else
+    fprintf('Q1 is not accurate for image 2, the result ID for %s is %s\n',id, id_result_2);
 end
+
 if (strcmp(id,id_result_3)==1)
-    display('Q1 is accurate for image 3');
+    fprintf('Q1 is accurate for image 3, the result ID for %s is %s \n',id, id_result_3);
+else
+    fprintf('Q1 is not accurate for image 3, the result ID for %s is %s\n',id, id_result_3);
 end

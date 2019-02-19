@@ -1,7 +1,0 @@
-function ID = dip_imageQR2ID()
-%DIP_IMAGEQR2ID Summary of this function goes here
-%   Detailed explanation goes here
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
-end
-
